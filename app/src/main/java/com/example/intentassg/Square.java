@@ -25,23 +25,17 @@ public class Square extends AppCompatActivity {
         ans=findViewById(R.id.textView);
         btt=findViewById(R.id.btt);
         button3=findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent m= new Intent(Square.this,MainActivity2.class);
-                startActivity(m);
-                
-            }
+        button3.setOnClickListener(v -> {
+            Intent m= new Intent(Square.this,MainActivity2.class);
+            startActivity(m);
+
         });
-        btt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int n1= Integer.parseInt(txt1.getText().toString());
+        btt.setOnClickListener(v -> {
+            int n1= Integer.parseInt(txt1.getText().toString());
 
-                int area= n1*n1;
-                ans.setText(String.valueOf(area));
+            int area= n1*n1;
+            ans.setText(String.valueOf(area));
 
-            }
         });
     }
 
